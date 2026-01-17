@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top,#020617,#000);
+  color: #fff;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero span {
+  color: #7c7cff;
+}
+
+.hero-btn {
+  margin-top: 25px;
+  padding: 14px 34px;
+  border-radius: 40px;
+  background: linear-gradient(135deg,#7c7cff,#00f5ff);
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.4s;
+}
+
+.hero-btn:hover {
+  box-shadow: 0 0 25px #00f5ff;
+}
+
+/* SECTION */
+section {
+  padding: 90px 10%;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #00f5ff;
+}
+
+/* ABOUT */
+.about p {
+  max-width: 700px;
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 20px;
+}
+
+.skills-grid div {
+  background: rgba(255,255,255,0.08);
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: 0.4s;
+}
+
+.skills-grid div:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #22d3ee;
+}
+
+/* PROJECTS */
+.project-grid {
+  display: grid;
+  gap: 30px;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  transition: 0.4s;
+}
+
+.project-card:hover {
+  box-shadow: 0 0 25px #00f5ff;
+}
+
+.project-card span {
+  display: block;
+  margin-top: 10px;
+  color: #a5f3fc;
+  font-size: 14px;
+}
+
+/* CONTACT LINKS */
+.contact a {
+  color: #a5f3fc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact a:hover {
+  color: #00f5ff;
+  text-shadow: 0 0 10px #00f5ff;
+}
+
+/* ANIMATIONS */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal.left { transform: translateX(-60px); }
+.reveal.right { transform: translateX(60px); }
+.reveal.zoom { transform: scale(0.7); }
+
+.reveal.active.left,
+.reveal.active.right,
+.reveal.active.zoom {
+  transform: none;
+}
